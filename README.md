@@ -44,3 +44,5 @@
 | POST          |/user/readFile     | import file into user list                  | file      | 
 | GET           |/user/uploadedList | return users who are having invalid input   |           |
 | POST          |/user/register     | commit the list uploaded in a sql database  |           |
+
+- You might use excel format that is in the project (users.xlxs)
