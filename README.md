@@ -22,52 +22,25 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
+# Read excel file and save it into database in nestjs
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## Technology used
+-	Nestjs framework
+-	Database: mysql
 
-## Installation
 
-```bash
-$ npm install
-```
+## End points
 
-## Running the app
+### end point without JWT token authentication
 
-```bash
-# development
-$ npm run start
+| Methods       | Endpoints            | Actions            | Parameter  |
+| ------------- |:-------------------  | ------------------:|:----------:|
+| POST          | /user/token          | Create token       |username    |
 
-# watch mode
-$ npm run start:dev
+### End point be accessible via JWT token based authentication
 
-# production mode
-$ npm run start:prod
-```
-
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+| Methods       | Endpoints         | Actions                                     | Parameter |
+| ------------- |:---------------   |:------------------------------------------  |:---------:|
+| POST          |/user/readFile     | import file into user list                  | file      | 
+| GET           |/user/uploadedList | return users who are having invalid input   |           |
+| POST          |/user/register     | commit the list uploaded in a sql database  |           |
